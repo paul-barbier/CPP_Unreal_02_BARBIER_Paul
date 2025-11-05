@@ -29,16 +29,14 @@ AExerciceActor::AExerciceActor()
 	SphereMesh = sphereMeshFinder.Object;
 }
 
-void AExerciceActor::OnConstruction()
+void AExerciceActor::OnConstruction(const FTransform& Transform)
 {
-	if (SwitchComponent == true)
-	{
+	Super::OnConstruction(Transform);
+
+	if (SwitchComponent)
 		MeshComponent->SetStaticMesh(SphereMesh);
-	}
 	else
-	{
 		MeshComponent->SetStaticMesh(CubeMesh);
-	}
 }
 
 // Called when the game starts or when spawned
@@ -53,7 +51,7 @@ void AExerciceActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	OnConstruction();
+	OnConstruction(GetActorTransform());
 }
 
 

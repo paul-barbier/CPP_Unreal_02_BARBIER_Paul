@@ -5,7 +5,3 @@
 
 // Add default functionality here for any IExerciceInterface functions that are not pure virtual.
 
-void const IExerciceInterface::GetLocation(FVector& location)
-{
-	return;
-}

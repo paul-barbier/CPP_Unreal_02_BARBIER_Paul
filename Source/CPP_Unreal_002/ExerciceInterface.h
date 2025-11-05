@@ -22,5 +22,5 @@ class CPP_UNREAL_002_API IExerciceInterface
 
 public:
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-	void const GetLocation(FVector& location);
+	void GetLocation(const FVector& Location);
 };

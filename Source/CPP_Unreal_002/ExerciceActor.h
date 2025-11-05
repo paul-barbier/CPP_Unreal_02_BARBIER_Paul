@@ -15,12 +15,12 @@ public:
 	// Sets default values for this actor's properties
 	AExerciceActor();
 
-	UFUNCTION(BlueprintCallable)
-	void OnConstruction();
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UFUNCTION(BlueprintCallable)
+	virtual void OnConstruction(const FTransform& Transform) override;
 
 public:
 	// Called every frame
